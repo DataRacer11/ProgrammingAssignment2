@@ -1,4 +1,4 @@
-Introduction to RProgramming Assignment 2
+Introduction to RProgramming Assignment 2, cachematrix.R
 
 In this second programming assignment we are required to write an R function 
 that is able to cache potentially time-consuming computations. 
@@ -17,11 +17,13 @@ the current environment. Below are two functions that are used to create a speci
 cache the inverse of a matrix.
 
 The First Function; makeCacheMatrix: creates a special "matrix" object that can cache its inverse.
-The Second Function: cacheSolve: computes the inverse of the special "matrix" returned by makeCacheMatrix. 
+The Second Function: cacheSolve: computes the inverse of the 
+special "matrix" returned by makeCacheMatrix. 
 
-If the inverse has already been calculated (and the matrix has not changed), then the cachesolve retrieves 
-the inverse from the cache.
+If the inverse has already been calculated (and the matrix has not changed), 
+then the cachesolve retrieves the inverse from the cache.
 
-I have run the same sample output in my RStudio console which is referenced on GIT HUB from author sefakilic on Apr 27, 2014.
+I have run the same sample output in my RStudio console which is referenced 
+on GIT HUB from author sefakilic on Apr 27, 2014.
 
 
