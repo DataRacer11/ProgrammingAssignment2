@@ -11,11 +11,14 @@
 ##  Jeff Leek, PhD, and Brian Caffo, PhD
 
 ##  The <<- operator can be used to assign a value to an object in an environment that is different from 
-##  the current environment. Below are two functions that are used to create a special object that can cache the inverse of a matrix.
+##  the current environment. 
 
-##  The First function; makeCacheMatrix: creates a special "matrix" object that can cache its inverse.
-##  The Second function: cacheSolve: computes the inverse of the special "matrix" returned by makeCacheMatrix. 
-##  If the inverse has already been calculated (and the matrix has not changed), then the cachesolve retrieves the inverse from the cache.
+##  Below are two functions that are used to create a special object that can cache the inverse of a matrix.
+
+##  The First Function; makeCacheMatrix: creates a special "matrix" object that can cache its inverse.
+##  The Second Function: cacheSolve: computes the inverse of the special "matrix" returned by makeCacheMatrix. 
+##  If the inverse has already been calculated (and the matrix has not changed), 
+##  cachesolve retrieves the inverse from the cache.
 
 ##  1. set the value of the matrix
 ##  2. get the value of the matrix
@@ -36,8 +39,10 @@ makeCacheMatrix <- function(x = matrix()) {
         list (set=set, get=get, setinverse=setinverse, getinverse=getinverse)
 }
 
-##  The following function returns the inverse of the matrix with the above function. It first checks to see if the inverse has already been computed.
-##  If so, it gets the inverse result from the cache and skips the computation. Otherwise, it computes the inverse of the data and sets the value of the 
+##  The following function returns the inverse of the matrix with the above function. 
+##  It first checks to see if the inverse has already been computed.
+##  If so, it gets the inverse result from the cache and skips the computation. 
+##  Otherwise, it computes the inverse of the data and sets the value of the 
 ##  matrix in the cache via the setinverse function.
 ##  Computing the inverse of a square matrix can be done with the solve function in R.
 ##  For example, if X is a square invertible matrix, then solve(X) returns its inverse.
@@ -56,7 +61,7 @@ cacheSolve <- function(x, ...) {
 }
 
 ## Example of what the matrix would look like in the console: 
-## I have modified example run found on GIT HUB from sefakilic on Apr 27, 2014.
+## I have utilized a repository found on GIT HUB from author sefakilic on Apr 27, 2014.
 ## This ran with the very same sample output on my console in RStudio.
 ## > x = rbind(c(1, -2/3), c(-2/3, 1))
 ## > m = makeCacheMatrix(x)
